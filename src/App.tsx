@@ -9,7 +9,7 @@ import Login from './Auth/Login';
 import { AuthProvider } from './Auth/AuthContext';
 import Register from './Auth/Register';
 import PrivateRoute from './Auth/privateRoute';
-import Dashboard from './DesignLayout/Dashboard';
+import Sales from './Pages/Sale/Index';
 import "antd/dist/reset.css"; // for AntD v5+
 // import Notifications from './Pages/Notification';
 // import { SettingsProvider } from './Pages/Settings/SettingContext';
@@ -29,7 +29,7 @@ const App: React.FC = () => {
         <Route path="*" element={<Navigate replace to="/login" />} />
           <Route path='/login' element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route element={<PrivateRoute  children={<Dashboard />} />}>
+          <Route element={<PrivateRoute  children={<Sales />} />}>
             {AdminRoutes.map((route) => (
               <Route
                 key={route.path}

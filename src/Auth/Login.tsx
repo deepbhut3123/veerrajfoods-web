@@ -28,7 +28,7 @@ const Login: React.FC = () => {
       localStorage.setItem("authData", JSON.stringify(authData));
       setAuthData(authData);
       setIsLoading(false);
-      navigate("/dashboard");
+      navigate("/sales");
     } catch (error: any) {
       setIsLoading(false);
       const errorMessage =
